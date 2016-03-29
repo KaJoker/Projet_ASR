@@ -2,6 +2,7 @@
 bool=false       # bool pour éxectuter l'action num 2 
 NOT_INSTALL=false # pour vérifier si on a éxecuter l'installation ou pas des programmes
 USERS_CHANGED=false
+USER_CREATED=false
 while read -p  "
 CHoisissez une action à éxecuter : 
                           1) : Creation d'un compte root et attribution du nom daryl à la machine 
@@ -19,10 +20,16 @@ CHoisissez une action à éxecuter :
 Choisissez un nombre puis appuyez sur Enter :) " touche ;
 do
 	case $touche in 
-                 1) echo "le nom de la machine est : "; cat /etc/hostname ;;   
-     	         2) if $NOT_INSTALL 
+                 1) if $USER_CREATED 
+                               then 
+                                    echo "Utilisateur existe" 
+                    else 
+                         bash create_user; echo "le nom de la machine est : "; cat /etc/hostname; $USER_CREATED=true;  
+                        
+     	            fi ;;
+                   2) if $NOT_INSTALL 
                               then 
-                                    bash install_all.sh; bool=true
+                                    bash install_all.sh; $bool=true
                               else 
                                     echo "INSTALLATION dèja faite"
                     fi ;; 
@@ -33,15 +40,15 @@ do
                                          echo "Error : Etape 1 et 2 non exécutés " 
                           fi ;;
              	 4) if $NOT_INSTALL
-                             then  bash install_all2.sh; NOT_INSTALL=false
+                             then  bash install_all2.sh; $NOT_INSTALL=false 
                              else 
-                                bash delete_all.sh; bash install2_all.sh;  NOT_INSTALL=false 
+                                bash delete_all.sh; bash install2_all.sh;  $NOT_INSTALL=false 
                      fi ;;
                  5) if $NOT_INSTALL 
                        then
                               echo "Mysql server et/ou apache ne sont pas encore installés"
                        else 
-                              bash question5.sh ; USERS_CHANGED=true 
+                              bash question5.sh ; $USERS_CHANGED=true 
                    fi ;;
                  6) echo " Working on it (<:)" ;;
                  7) echo " Working on it too " ;; 
