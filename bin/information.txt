@@ -1,0 +1,8 @@
+hostname : rick
+http_state : KO
+Mysql_state : KO
+phpmyadmin_state :KO
+http_user_conf :
+Mysql_user_conf :
+http_user_pid :
+mysql_user_pid :
