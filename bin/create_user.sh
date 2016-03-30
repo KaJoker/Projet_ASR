@@ -13,7 +13,7 @@ if [ $hostname = $hostname2 ]
 fi
 /etc/init.d/hostname.sh # pour MAJ le nom de la machine 
 #tester utilisateur carole
-user=$(grep -o -i "carole" /etc/passwd )
+user=$(grep -o -i "carole" /etc/passwd | cut -d':' -f 1)
 if [ $user = "carole" ]
 	then
 		echo "Utilisateur dèja crée "; userdel carole; 
