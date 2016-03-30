@@ -36,7 +36,7 @@ do
                     fi ;; 
                  3) if $bool # on peut éxecuter cette opération SSI on a jèja éxecuter 1 et 2 
                                    then  
-                                         bash total.sh;echo "\t"; cat information.txt;echo "\n"; 
+                                         bash question3.sh;echo "\t"; cat information.txt;echo "\n"; 
                                    else  
                                          echo "Error : Etape 1 et 2 non exécutés " 
                           fi ;;
