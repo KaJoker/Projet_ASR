@@ -1,6 +1,0 @@
-#!/bin/bash
-echo "rick" >/etc/hostname
-apt-get	-y install sudo 
-useradd mohammed
-echo -e "mohammed:pass"|chpasswd
-echo -e "mohammed ALL=(ALL) ALL" >> /etc/sudoers
