@@ -1,10 +1,9 @@
 #! /bin/bash 
-bool=false       # bool pour éxectuter l'action num 2 
-NOT_INSTALL=false # pour vérifier si on a éxecuter l'installation ou pas des programmes
+bool=true       # bool pour éxectuter l'action num 2 
+NOT_INSTALL=true # pour vérifier si on a éxecuter l'installation ou pas des programmes
 USERS_CHANGED=false
 USER_CREATED=false
-while read -p  "
-CHoisissez une action à éxecuter : 
+while read -p " CHoisissez une action à éxecuter : 
                           1) : Creation d'un compte root et attribution du nom daryl à la machine 
                           2) : Installation de : 
                         		       a) Mysql server 
@@ -15,44 +14,48 @@ CHoisissez une action à éxecuter :
 		          5) : Changement des utilisateurs  
 		          6) : L'automatisation de changement des utiisateurs 
 			  7) : Automatisation à partir d'une image inconnue  
-		          8) : Réalisation d'images de test    
+		          8) : Réalisation d'images de test   
+                          9) : Tester la connexion avec  ping google.com   
 			  99): Exit the program  :)  
 Choisissez un nombre puis appuyez sur Enter :) " touche ;
 do
 	case $touche in 
-                 1) if $USER_CREATED 
+                 1) if $USER_CREATED # on teste si on a dèja éxecuter cette opération 
                                then 
                                     echo "Utilisateur existe" 
-                    else 
-                         bash create_user; echo "le nom de la machine est : "; cat /etc/hostname; $USER_CREATED=true;  
+                    else
+                         bash question1.sh 
+                        echo "le nom de la machine est : "; cat /etc/hostname; USER_CREATED=true;  
                         
      	            fi ;;
-                   2) if $NOT_INSTALL 
+                 2) if $NOT_INSTALL # si la premiére installation
                               then 
-                                    bash install_all.sh; $bool=true
+                                    bash question2.sh; NOT_INSTALL=false; bool=true # installation faite 
                               else 
                                     echo "INSTALLATION dèja faite"
                     fi ;; 
-                 3) if $bool
+                 3) if $bool # on peut éxecuter cette opération SSI on a jèja éxecuter 1 et 2 
                                    then  
                                          bash total.sh;echo "\t"; cat information.txt;echo "\n"; 
                                    else  
                                          echo "Error : Etape 1 et 2 non exécutés " 
                           fi ;;
-             	 4) if $NOT_INSTALL
-                             then  bash install_all2.sh; $NOT_INSTALL=false 
+               	 4) if $NOT_INSTALL  # Si la 1er installation on installe directement 
+                             then  bash question4.sh install.conf; NOT_INSTALL=false 
                              else 
-                                bash delete_all.sh; bash install2_all.sh;  $NOT_INSTALL=false 
+                                bash delete_all.sh; bash question4.sh;  # sinon on 
+ 									   # supprime la 1ér installation 
                      fi ;;
                  5) if $NOT_INSTALL 
                        then
                               echo "Mysql server et/ou apache ne sont pas encore installés"
                        else 
-                              bash question5.sh ; $USERS_CHANGED=true 
+                              bash question5.sh ; USERS_CHANGED=true 
                    fi ;;
                  6) echo " Working on it (<:)" ;;
                  7) echo " Working on it too " ;; 
                  8) echo " 3 working on it ";;   
+                 9) ping  "google.com" ;; 
                  99) echo " Good bye ): \n" ; exit ;; 
      		 *)  echo " Choix impossible :/ \n "                
 	esac 
