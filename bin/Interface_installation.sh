@@ -41,9 +41,9 @@ do
                                          echo "Error : Etape 1 et 2 non exécutés " 
                           fi ;;
                	 4) if $NOT_INSTALL  # Si la 1er installation on installe directement 
-                             then  bash question4.sh install.conf; NOT_INSTALL=false 
+                             then  bash install_phpmyadmin.sh install.conf; NOT_INSTALL=false 
                              else 
-                                bash delete_all.sh; bash question4.sh install.conf;  # sinon on 
+                                bash delete_all.sh; bash install_phpmyadmin.sh install.conf;  # sinon on 
  									   # supprime la 1ér installation 
                      fi ;;
                  5) if $NOT_INSTALL 
