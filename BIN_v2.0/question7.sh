@@ -21,7 +21,7 @@ fi
 # 2) L'état de HTTP **************************************************************************** 
 
 # Si mysql-server et/ou phpmyadmin sont installés alors on les supprimes car on sait pas leur 
-# configuration 
+# configurations
 
 echo  "phpmyadmin phpmyadmin/dbconfig-remove boolean true" |debconf-set-selections
 echo  "dbconfig-common  dbconfig-common/dbconfig-remove  boolean true" | debconf-set-selections
@@ -29,6 +29,11 @@ echo  "mysql-server-5.5 mysql-server-5.5/postrm_remove_databases   boolean true"
 echo  "dbconfig-common dbconfig-common/pgsql/changeconf boolean false" | debconf-set-selections
 echo  "dbconfig-common dbconfig-common/dbconfig-remove boolean true" |debconf-set-selections
 echo  "dbconfig-common dbconfig-common/remove-error select abort" |debconf-set-selections
+echo  "mysql-server-5.5 mysql-server-5.5/postrm_remove_databases boolean false" | debconf-set-selections
+echo  "phpmyadmin phpmyadmin/remove-error select abort" | debconf-set-selections
+echo  "dbconfig-common  dbconfig-common/dbconfig-remove boolean true" | debconf-set-selections
+echo  "dbconfig-common  dbconfig-common/internal/reconfiguring  boolean false" | debconf-set-selections
+echo  "dbconfig-common  dbconfig-common/purge   boolean false" | debconf-set-selections
 
 apt-get -y remove  mysql-server mysql-client mysql-common phpmyadmin apache2
 apt-get -y purge   mysql-server mysql-client mysql-common phpmyadmin apache2
@@ -166,4 +171,4 @@ echo "mysql_user_conf : $MY_USER " >> auto7.txt
 echo "http_user_pid   : $pid_apache" >> auto7.txt 
 echo "http_user_pid   : $pid_mysql " >> auto7.txt 
 
-
+cat auto7.txt 
