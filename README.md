@@ -3,7 +3,7 @@
 <h3> L3 ASR 2015/2016 </h3> 
 <h5>        Encadreur : M.Poligny </h5> 
 </br> </br>
- <p style="text-align:center";>  <strong> Le Projet </P> </p> 
+ <p style="text-align:center";>  <strong> Le Projet </strong> </p> 
 <p> Le but de ce projet est d'installer d'une façon automatique et silencieuse : Phpmyadmin Mysql et apache2 </P> 
 <p> les fichiers d'installation récupéent des variables à partir des fichiers de configurations </p> 
 <p> le dossier BIN_V2.0 contient tous les scripts du projet</P> 
