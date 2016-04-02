@@ -1,4 +1,0 @@
-user_beth="beth"
-user_carl="carl"
-pid_sql=500
-pid_apache=501
