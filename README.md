@@ -1,6 +1,6 @@
-#        Université d'Evry Val d'Esonne 
-## Projet d'administration systèmes et réseaux 
-##           L3 ASR 2015/2016 
+<h1>        Université d'Evry Val d'Esonne </h1> 
+<h2> Projet d'administration systèmes et réseaux </h2>
+<h3>          L3 ASR 2015/2016 </h3>
 ###        Encadreur : M.Poligny 
 <p> Le but de ce projet est d'installer d'une façon automatique et silencieuse : Phpmyadmin Mysql et apache2 </P> 
 <p> les fichiers d'installation récupéent des variables à partir des fichiers de configurations </p> 
