@@ -1,4 +1,7 @@
-# Projet_ASR
+# Université d'Evry Val d'Esonne 
+## Projet d'administration systèmes et réseaux 
+## L3 ASR 2015/2016 
+
 <p> Le but de ce projet est d'installer d'une façon automatique et silencieuse : Phpmyadmin Mysql et apache2 </P> 
 <p> les fichiers d'installation récupéent des variables à partir des fichiers de configurations </p> 
 <p> le dossier BIN_V2.0 contient tous les scripts du projet</P> 
