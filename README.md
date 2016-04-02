@@ -4,7 +4,7 @@
 <p> le dossier BIN_V2.0 contient tous les scripts du projet</P> 
 Pour lancer le programmes on lance le script : ** Prog_Installation.sh **, ce script va éxecuter d'une maniére séquentielle ces scripts : 
 <ol>
-    <li> install_phpmyadmin.sh install.conf </li> ** installation de mysql , apache2 , phpmyadmin ** 
+   ** <li> install_phpmyadmin.sh install.conf </li>  installation de mysql , apache2 , phpmyadmin ** 
     <li> question1.sh </li> ** modification du nom de la machine et création d'un super-user carole **  
     <li> question3.sh  </li> ** script de verification de l'ensemble de l'installation ** 
     <li> change_user.sh change.conf </li> ** changement automatique d'utilisateurs mysql et apache ** 
