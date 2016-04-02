@@ -2,7 +2,7 @@
 
 MYSQL_STATE()
 {
-(echo "show databases;" | mysql -pglenn) 2>/dev/null 1>/dev/null
+(echo "show databases;" | mysql -uroot -pglenn) 2>/dev/null 1>/dev/null
 ret=$(echo $?)
 zero=0
 if [ "$ret" -eq "$zero" ]
