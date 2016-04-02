@@ -20,8 +20,8 @@ fi
 
 # 2) L'état de HTTP **************************************************************************** 
 
-# Si mysql-server et/ou phpmyadmin sont installés alors on les supprimes car on sait pas leur 
-# configurations
+# Si mysql-server et/ou phpmyadmin sont installés alors on les supprime car on sait pas leur 
+# configurations  
 
 echo  "phpmyadmin phpmyadmin/dbconfig-remove boolean true" |debconf-set-selections
 echo  "dbconfig-common  dbconfig-common/dbconfig-remove  boolean true" | debconf-set-selections
