@@ -20,7 +20,11 @@ chown -R $APACHE_USER /var/lib/phpmyadmin/tmp
 chown -R $APACHE_USER /var/cache/tcpdf
 chown -R $APACHE_USER /var/cache/apache2/mod_cache_disk
 
-service apache2 start
+echo "500" > /var/run/apache2/apache2$SUFFIX.pid  # c'est faux 
+
+service apache2 start 
+
+
 
 #************************** Mysql User change *************************#
 useradd $MYSQL_USER
@@ -29,6 +33,8 @@ sed -i 's/= mysql/= '$MYSQL_USER'/g' /etc/mysql/my.cnf
 
 chown -R $MYSQL_USER /var/lib/mysql
 chown -R $MYSQL_USER /var/run/mysqld
+
+echo "501" > /var/run/mysqld/mysqld.pid # c'est faux aussi 
 
 service mysql start
 
@@ -43,11 +49,4 @@ MY_USER=$(grep -i "user\s" /etc/mysql/my.cnf | cut -d"=" -f 2 | awk '{print $1}'
 
 echo "APACHE_USER: $AP_USER | APACHE_PID : $pid_apache"
 echo "MYSQL_USER : $MY_USER | MYSQL_PID : $pid_mysql"
-
-
-
-
-
-
-
 
