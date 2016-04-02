@@ -6,7 +6,7 @@ Pour lancer le programmes on lance le script : **Prog_Installation.sh**  ce scri
 <p>
 <ol>
     <li> install_phpmyadmin.sh install.conf </li>  ** installation de mysql , apache2 , phpmyadmin ** 
-    <li> question1.sh :  ** modification du nom de la machine et création d'un super-user carole ** </li>
+    <li> question1.sh </li>  <strong> modification du nom de la machine et création d'un super-user carole </strong>  
     <li> question3.sh  </li> ** script de verification de l'ensemble de l'installation **
     <li> change_user.sh change.conf </li> ** changement automatique d'utilisateurs mysql et apache **
     <li> question7.sh info7.conf </li> ** Automatisation de l'installation et de changement d'utilisateurs ... etc à partir d'une image inconnue ** </li>
