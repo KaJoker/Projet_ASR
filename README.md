@@ -6,7 +6,7 @@
  <p style="text-align:center";>  <strong> Le Projet </strong> </p> 
 <p> Le but de ce projet est d'installer d'une façon automatique et silencieuse : Phpmyadmin Mysql et apache2 </P> 
 <p> les fichiers d'installation récupéent des variables à partir des fichiers de configurations </p> 
-<p> le dossier BIN_V2.0 contient tous les scripts du projet</P> 
+<p> le dossier <strong> BIN_V2.0 </strong> contient tous les scripts du projet</P> 
 Pour commencer on lance le script : **Prog_Installation.sh**  ce script va éxecuter d'une maniére séquentielle ces scripts :
 <p>
 <ol>
