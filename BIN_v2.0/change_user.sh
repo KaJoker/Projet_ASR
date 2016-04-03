@@ -40,8 +40,8 @@ service mysql start
 
 #******************* Les PID de : MySQL et Apache2 ********************#
 
-pid_mysql=$(ps -aux | grep -w beth | cut -d"?" -f 1 | awk '{print $2}' | sed -n '1p')
-pid_apache=$(ps -aux | grep -w carl | cut -d"?" -f 1 | awk '{print $2}' | sed -n '1p')
+pid_mysql=$(ps -aux | grep -w $MYSQL_USER | cut -d"?" -f 1 | awk '{print $2}' | sed -n '1p')
+pid_apache=$(ps -aux | grep -w $APACHE_USER | cut -d"?" -f 1 | awk '{print $2}' | sed -n '1p')
 
 AP_USER=$(grep -i APACHE_RUN_USER= /etc/apache2/envvars | cut -d"=" -f 2 )
 MY_USER=$(grep -i "user\s" /etc/mysql/my.cnf | cut -d"=" -f 2 | awk '{print $1}' | head -n 1 )

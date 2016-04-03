@@ -10,12 +10,11 @@ while read -p " CHoisissez une action à éxecuter :
                      			       b) Phpmyadmin   
                    			       c) apache2      
 			  3) : Tester l'installation ( après l'éxecution des étapes :  1) et 2) 
-			  4) : Automatisation de l'installation à partir d'un fichier 
-		          5) : Changement des utilisateurs  
-		          6) : L'automatisation de changement des utiisateurs 
-			  7) : Automatisation à partir d'une image inconnue  
-		          8) : Réalisation d'images de test   
-                          9) : Tester la connexion avec  ping google.com   
+			  4) : Automatisation de l'installation à partir d'un fichier   
+		          5) : L'automatisation de changement des utiisateurs 
+			  6) : Automatisation à partir d'une image inconnue  
+		          7) : Réalisation d'images de test   
+                          8) : Tester la connexion avec  ping google.com   
 			  99): Exit the program  :)  
 Choisissez un nombre puis appuyez sur Enter :) " touche ;
 do
@@ -30,7 +29,7 @@ do
      	            fi ;;
                  2) if $NOT_INSTALL # si la premiére installation
                               then 
-                                    bash question2.sh; NOT_INSTALL=false; bool=true # installation faite 
+                                    bash install_phpmyadmin.sh install.conf ; NOT_INSTALL=false; bool=true # installation faite 
                               else 
                                     echo "INSTALLATION dèja faite"
                     fi ;; 
@@ -50,10 +49,9 @@ do
                        then
                               echo "Mysql server et/ou apache ne sont pas encore installés"
                        else 
-                              bash question5.sh ; USERS_CHANGED=true 
+                              bash change_user.sh change.conf ; USERS_CHANGED=true 
                    fi ;;
-                 6) echo " Working on it (<:)" ;;
-                 7) echo " Working on it too " ;; 
+                 6) echo " On arrive à un même état (e+1) de n'importe quel état (e)  (<:)"; bash question7.sh info7.conf; ;; 
                  8) echo " 3 working on it ";;   
                  9) ping  "google.com" ;; 
                  99) echo " Good bye ): \n" ; exit ;; 
