@@ -34,5 +34,5 @@ sleep 10
 echo " Automatisation à partir d'une image inconnue "
 
 bash question7.sh info7.conf 
-
-bash question8.sh 
+cat auto7.txt
+sleep 10  
