@@ -17,3 +17,4 @@ Pour commencer on lance le script : **Prog_Installation.sh**  ce script va éxec
     <li> <strong> question7.sh info7.conf  </strong>  : Automatisation de l'installation et de changement d'utilisateurs ... etc à partir d'une image inconnue  </li>
 </ol>
 </p>
+<p> Le script <strong> Prog_Installation.sh </strong> c'est un menu d'installation, il propose des choix et vérifie des conditions et des dépendances pour éxecuter les différents scripts </p> 
