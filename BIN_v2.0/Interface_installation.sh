@@ -13,8 +13,7 @@ while read -p " CHoisissez une action à éxecuter :
 			  4) : Automatisation de l'installation à partir d'un fichier   
 		          5) : L'automatisation de changement des utiisateurs 
 			  6) : Automatisation à partir d'une image inconnue  
-		          7) : Réalisation d'images de test   
-                          8) : Tester la connexion avec  ping google.com   
+		          7) : Tester la connexion avec  ping google.com   
 			  99): Exit the program  :)  
 Choisissez un nombre puis appuyez sur Enter :) " touche ;
 do
@@ -52,9 +51,9 @@ do
                               bash change_user.sh change.conf ; USERS_CHANGED=true 
                    fi ;;
                  6) echo " On arrive à un même état (e+1) de n'importe quel état (e)  (<:)"; bash question7.sh info7.conf; ;; 
-                 8) echo " 3 working on it ";;   
-                 9) ping  "google.com" ;; 
-                 99) echo " Good bye ): \n" ; exit ;; 
-     		 *)  echo " Choix impossible :/ \n "                
+ 
+                 7) ping  "google.com" ;; 
+                 99) echo " Good bye (<:)  " ; exit ;; 
+     		 *)  echo " Choix impossible :/  "            
 	esac 
 done  
