@@ -18,4 +18,4 @@ Pour commencer on lance le script : **Prog_Installation.sh**  ce script va éxec
 </ol>
 </p>
 <p> Le script <strong> Interface_installation.sh </strong> c'est un menu d'installation, il propose des choix et vérifie des conditions et des dépendances pour éxecuter les différents scripts </p> 
-On peut considérer que le script <strong> Interface_installation.sh </strong> traite la question 8 du projet mais un peu un peu différemment car ce script propose des choix pour l'éxecution d'autres scripts ce qui peut engendrer des erreurs lors de l'éxecution de script qui traite la question7.  
+On peut considérer que le script <strong> Interface_installation.sh </strong> traite la question 8 du projet mais un peu différemment car ce script propose des choix pour éxecuter des scripts qui traitent autres questions de projet, ce qui peut engendrer des erreurs lors de l'éxecution de script qui traite la question7.  
