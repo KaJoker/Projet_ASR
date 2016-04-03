@@ -17,4 +17,5 @@ Pour commencer on lance le script : **Prog_Installation.sh**  ce script va éxec
     <li> <strong> question7.sh info7.conf  </strong>  : Automatisation de l'installation et de changement d'utilisateurs ... etc à partir d'une image inconnue  </li>
 </ol>
 </p>
-<p> Le script <strong> Prog_Installation.sh </strong> c'est un menu d'installation, il propose des choix et vérifie des conditions et des dépendances pour éxecuter les différents scripts </p> 
+<p> Le script <strong> Interface_installation.sh </strong> c'est un menu d'installation, il propose des choix et vérifie des conditions et des dépendances pour éxecuter les différents scripts </p> 
+On peut considérer que le script <strong> Interface_installation.sh </strong> traite la question 8 du projet mais un peu différemment car ce script propose des choix pour éxecuter des scripts qui traitent autres questions de projet, ce qui peut engendrer des erreurs lors de l'éxecution de script qui traite la question7.  
